@@ -72,17 +72,74 @@
                     </navigationItem>
                     <connections>
                         <segue destination="25C-fc-cFF" kind="show" id="bLO-2b-cbN"/>
+                        <segue destination="3Y6-q5-5G6" kind="show" id="5r8-IG-kFI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuF-QG-g83" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="hgc-hf-vOt">
-                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </activityIndicatorView>
             </objects>
             <point key="canvasLocation" x="1199.2" y="-8.5457271364317844"/>
         </scene>
-        <!--Add Photo View Controller-->
+        <!--內容-->
+        <scene sceneID="fjv-Jq-gAV">
+            <objects>
+                <viewController storyboardIdentifier="ShowDetailViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Y6-q5-5G6" customClass="ShowDetailViewController" customModule="FinalAssessment_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yma-gU-xEf"/>
+                        <viewControllerLayoutGuide type="bottom" id="3jV-xl-6e6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4ax-m8-TaI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehC-cr-OYo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vbJ-Ne-8On">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vbJ-Ne-8On" secondAttribute="trailing" id="CYX-xG-KBa"/>
+                                    <constraint firstItem="vbJ-Ne-8On" firstAttribute="leading" secondItem="ehC-cr-OYo" secondAttribute="leading" id="GfS-75-fYs"/>
+                                    <constraint firstAttribute="height" constant="375" id="NBg-sT-WbZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="vbJ-Ne-8On" secondAttribute="bottom" id="VDS-kQ-dTd"/>
+                                    <constraint firstItem="vbJ-Ne-8On" firstAttribute="centerX" secondItem="ehC-cr-OYo" secondAttribute="centerX" id="aI3-eC-jm7"/>
+                                    <constraint firstItem="vbJ-Ne-8On" firstAttribute="centerY" secondItem="ehC-cr-OYo" secondAttribute="centerY" id="jYY-2j-ZKh"/>
+                                    <constraint firstItem="vbJ-Ne-8On" firstAttribute="top" secondItem="ehC-cr-OYo" secondAttribute="top" id="vSd-7K-v5k"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShZ-hJ-3JJ">
+                                <rect key="frame" x="36" y="489" width="303" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c5h-OQ-td5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ShZ-hJ-3JJ" firstAttribute="top" secondItem="ehC-cr-OYo" secondAttribute="bottom" constant="50" id="0FS-mz-tlx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ShZ-hJ-3JJ" secondAttribute="trailing" constant="20" id="0pE-Rn-Bex"/>
+                            <constraint firstAttribute="trailing" secondItem="ehC-cr-OYo" secondAttribute="trailing" id="5Fp-j8-yGk"/>
+                            <constraint firstItem="ehC-cr-OYo" firstAttribute="leading" secondItem="4ax-m8-TaI" secondAttribute="leading" id="BZr-c0-gof"/>
+                            <constraint firstItem="ehC-cr-OYo" firstAttribute="top" secondItem="yma-gU-xEf" secondAttribute="bottom" id="aVa-X1-WA3"/>
+                            <constraint firstItem="ShZ-hJ-3JJ" firstAttribute="leading" secondItem="4ax-m8-TaI" secondAttribute="leadingMargin" constant="20" id="qeA-La-MRo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="內容" id="S9V-6c-EjH"/>
+                    <connections>
+                        <outlet property="backScrollView" destination="ehC-cr-OYo" id="BuG-Pg-zvq"/>
+                        <outlet property="nameLabel" destination="ShZ-hJ-3JJ" id="E5h-ED-IpM"/>
+                        <outlet property="photoimage" destination="vbJ-Ne-8On" id="5QZ-13-WWm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnA-9d-QeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="349"/>
+        </scene>
+        <!--新增相片-->
         <scene sceneID="I72-Sk-89A">
             <objects>
                 <viewController storyboardIdentifier="AddPhotoViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="25C-fc-cFF" customClass="AddPhotoViewController" customModule="FinalAssessment_5" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,6 +202,7 @@
                             <constraint firstItem="sLY-2q-9D0" firstAttribute="top" secondItem="7E3-Xm-vSW" secondAttribute="bottom" id="mH6-Rg-AyQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="新增相片" id="AvG-ds-7P9"/>
                     <connections>
                         <outlet property="InputText" destination="5Pj-b5-ueT" id="1N1-Ud-nwr"/>
                         <outlet property="scrollViewSet" destination="sLY-2q-9D0" id="C2z-Zh-cwV"/>

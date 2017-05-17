@@ -131,5 +131,12 @@ class MainTableViewController: UITableViewController, NSFetchedResultsController
         return [shareAction, deleteAction]
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let showDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailViewController") as! ShowDetailViewController
+        showDetailViewController.selectName = photoArray[indexPath.row].name
+        showDetailViewController.selectPhoto = UIImage(data: photoArray[indexPath.row].photo as! Data)
+        
+        navigationController?.pushViewController(showDetailViewController, animated: true)
+    }
     
 }

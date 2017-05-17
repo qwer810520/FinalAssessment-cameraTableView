@@ -15,6 +15,7 @@
 		39FA7EFA1ECC2049006448CE /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA7EF91ECC2049006448CE /* MainTableViewController.swift */; };
 		39FA7EFC1ECC20DA006448CE /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA7EFB1ECC20DA006448CE /* MainTableViewCell.swift */; };
 		39FA7EFE1ECC2B61006448CE /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA7EFD1ECC2B61006448CE /* AddPhotoViewController.swift */; };
+		39FA7F001ECC91FE006448CE /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA7EFF1ECC91FE006448CE /* ShowDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		39FA7EF91ECC2049006448CE /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		39FA7EFB1ECC20DA006448CE /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		39FA7EFD1ECC2B61006448CE /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		39FA7EFF1ECC91FE006448CE /* ShowDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				39FA7EF91ECC2049006448CE /* MainTableViewController.swift */,
 				39FA7EFB1ECC20DA006448CE /* MainTableViewCell.swift */,
 				39FA7EFD1ECC2B61006448CE /* AddPhotoViewController.swift */,
+				39FA7EFF1ECC91FE006448CE /* ShowDetailViewController.swift */,
 			);
 			path = "FinalAssessment-5";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39FA7F001ECC91FE006448CE /* ShowDetailViewController.swift in Sources */,
 				39FA7EED1ECC1F45006448CE /* FinalAssessment_5.xcdatamodeld in Sources */,
 				39FA7EFA1ECC2049006448CE /* MainTableViewController.swift in Sources */,
 				39FA7EFE1ECC2B61006448CE /* AddPhotoViewController.swift in Sources */,
