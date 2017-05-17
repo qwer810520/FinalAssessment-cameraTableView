@@ -24,6 +24,8 @@ class MainTableViewController: UITableViewController, NSFetchedResultsController
         super.viewDidLoad()
         loadCoreData()
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "儲存", style: .plain, target: nil, action:nil)
+        
     }
     
     func loadCoreData() {
@@ -78,6 +80,7 @@ class MainTableViewController: UITableViewController, NSFetchedResultsController
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -100,6 +103,32 @@ class MainTableViewController: UITableViewController, NSFetchedResultsController
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style: .default, title: "Share") { (action, indexPath) in
+            let defaultAction = "title: \(String(describing: self.photoArray[indexPath.row].name))"
+            if let imageToShare = self.photoArray[indexPath.row].photo {
+                let photo = UIImage(data: imageToShare as Data)
+                let activityController = UIActivityViewController(activityItems: [defaultAction, photo!], applicationActivities: nil)
+                
+                self.present(activityController, animated: true, completion: nil)
+            }
+        }
+        
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                let content = appDelegate.persistentContainer.viewContext
+                let photoToDelete = self.fetchResultController.object(at: indexPath)
+                content.delete(photoToDelete)
+                
+                appDelegate.saveContext()
+            }
+        }
+        shareAction.backgroundColor = UIColor.blue
+        
+        return [shareAction, deleteAction]
     }
     
     
