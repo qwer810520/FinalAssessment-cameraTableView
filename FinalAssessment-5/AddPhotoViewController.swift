@@ -42,7 +42,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
                     if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
                         addPhoto = PhotoMo(context: appDelegate.persistentContainer.viewContext)
                         addPhoto?.name = name
-                        if let imageData = UIImagePNGRepresentation(photo) {
+                        if let imageData = UIImageJPEGRepresentation(photo, 0.5) {
                             addPhoto?.photo = NSData(data: imageData)
                         }
                         appDelegate.saveContext()
