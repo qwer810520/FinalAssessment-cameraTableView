@@ -9,6 +9,9 @@
 - 接著呼叫editActionsForRowAt的function來寫入分享以及刪除動作。
 
 #### 頁面顯示
+![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/1.imageset/1.PNG)
+
+![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/1-2.imageset/1-2.PNG)
 
 ### 新增頁面
 - 再來回到storyboard拉近一個ViewController，以及在首頁的NavigationController的右邊拉近一個新的Item，並且將scrollView元件先拉近ViewController裡面，接著在scrollView加進一個UIView，並在UIView再加入一個UIImageView跟TextField元件。
@@ -18,6 +21,9 @@
 - 最後在viewDidDisappear執行將所拍的照片以及文字存入CoreData裡面(因為在相機畫片被present出來時會呼叫到viewDidDisappear，所以我建立了一個Bool值的變數，一開始為false(不會執行存入動作)，當拍完照並且確定相片時變數就會變成true，當按下返回鍵首頁時就會執行儲存動作)。
 
 #### 頁面顯示
+![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/2.imageset/2.PNG)
+
+![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/2-1.imageset/2-1.PNG)
 
 ### 顯示內容頁面
 - 再回到StoryBoard裡，在建立一個新的ViewController，並且在裡面加入一個scrollView以及Label，並且在scrollView裡面拉近一個UIImageView元件，並設定所有相關的AutoLayout。
@@ -26,6 +32,9 @@
 - 接著回到ShowDetailViewController，首先先在ViewDidAppear裡面將接收到的值傳到相對應的元件上去做顯示，接著在Class宣告UIScrollViewDelegate協定，並在viewDidLoad裡面宣告delegate給本身Class，並且設定scrollView放大的最大倍數為兩倍，最後呼叫viewForZooming的方法來設定要執行放大的UIImageView。
 
 #### 頁面顯示
+![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/3.imageset/3.PNG)
+
+![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/3.imageset/3-1.PNG)
 
 
 
