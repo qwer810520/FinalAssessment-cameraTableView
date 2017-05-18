@@ -34,7 +34,7 @@
 #### 頁面顯示
 ![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/3.imageset/3.PNG)
 
-![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/3.imageset/3-1.PNG)
+![](https://github.com/qwer810520/FinalAssessment-cameraTableView/blob/master/FinalAssessment-5/Assets.xcassets/3-1.imageset/3-1.PNG)
 
 
 
